@@ -1,51 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="screen">
-            <div id="result">
-
-            </div>
-            <div id="operation">
-
-            </div>
+      <div class="screen">
+        <div id="result"></div>
+        <div id="operation"></div>
+      </div>
+      <div class="buttons">
+        <div
+          class="btn btn-ac"
+          onclick="document.getElementById('result').innerHTML ='' "
+        >
+          AC
         </div>
-        <div class="buttons">
-            <div class="btn btn-ac" onclick="document.getElementById('result').innerHTML ='' ">AC</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML ='' ">C</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='/' ">/</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='*' ">*</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='7' ">7</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='8' ">8</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='9' ">9</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='-' ">-</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='4' ">4</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='5' ">5</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='6' ">6</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='+' ">+</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='1' ">1</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='2' ">2</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='3' ">3</div>
-            <div class="btn btn-result" onclick="myFunction()">=</div>
-            <div class="btn btn-0" onclick="document.getElementById('operation').innerHTML +='0' ">0</div>
-            <div class="btn" onclick="document.getElementById('operation').innerHTML +='.' ">.</div>
-            
-            
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML ='' "
+        >
+          C
         </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='/' "
+        >
+          /
+        </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='*' "
+        >
+          *
+        </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='7' "
+        >
+          7
+        </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='8' "
+        >
+          8
+        </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='9' "
+        >
+          9
+        </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='-' "
+        >
+          -
+        </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='4' "
+        >
+          4
+        </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='5' "
+        >
+          5
+        </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='6' "
+        >
+          6
+        </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='+' "
+        >
+          +
+        </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='1' "
+        >
+          1
+        </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='2' "
+        >
+          2
+        </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='3' "
+        >
+          3
+        </div>
+        <div class="btn btn-result" onclick="myFunction()">=</div>
+        <div
+          class="btn btn-0"
+          onclick="document.getElementById('operation').innerHTML +='0' "
+        >
+          0
+        </div>
+        <div
+          class="btn"
+          onclick="document.getElementById('operation').innerHTML +='.' "
+        >
+          .
+        </div>
+      </div>
     </div>
     <script>
-        function myFunction() {
-            let x= eval(document.getElementById('operation').innerHTML);
-            document.getElementById('result').innerHTML = x.toFixed(5);
-        }
+      function myFunction() {
+        let x = eval(document.getElementById('operation').innerHTML)
+        document.getElementById('result').innerHTML = x.toFixed(2)
+      }
     </script>
-</body>
+  </body>
 </html>

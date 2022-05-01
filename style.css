@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 * {
     margin:0;
     padding:0;
@@ -10,47 +12,51 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: arial, helvetica, sans-serif;
+    
+    background-color: #2a384c;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .container {
-    width:300px;
-    height: 450px;
-    background-color:#525359;
-    border:5px solid #232323;
-    border-radius:10px;
+    width:400px;
+    height: 600px;
+    background-color:#20324a;
+    
+    border-radius:15px;
     display: grid;
-    grid-template-rows: 90px 270px;
-    gap: 25px;
-    padding: 25px;
+    grid-template-rows: 120px 300px;
+    gap: 35px;
+    padding: 35px;
+    box-shadow: 0 0px 0 0px rgb(73 73 73), 1px 2px 10px 0px #120b17;
 }
 .screen {
-    background-color:#868a6a;
+    background-color:#6c63ff;
     border-radius: 5px;
-    border:2px solid black;
+    border:3px solid black;
     display: grid;
     grid-template-rows: 60% 30%;
     gap:10%;
+    overflow: hidden;
 
 
 }
 #result {
-    font-size:3rem;
+    font-size:2.3rem;
 }
 #operation {
     text-align:end;
-    font-size:1.5rem;
+    font-size:1.8rem;
 }
 
 .buttons {
     
     border-radius:5px;
     display: grid;
-    grid-template-columns: 45px 45px 45px 45px;
+    grid-template-columns: 65px 65px 65px 65px ;
     gap: 10px;
-    grid-template-rows: repeat(5,40px);
+    grid-template-rows: repeat(5,60px);
     margin:  auto;
-    padding-top:12px;
+    padding-top:20px;
     font-size: 1.2rem;
     
 
@@ -62,11 +68,13 @@ body {
     color:white;
     padding-top: 12px;
     border-radius: 10px;
-    box-shadow: 0 0 0 3px rgb(47, 45, 45) , 5px 5px 3px rgb(119,116,116), inset 2px 2px 2px gray;
+    font-size: 1.8rem;
+   
     
 }
 .btn:hover {
     cursor: pointer;
+    background-color:#6c63ff;
 }
 .btn:active {
     opacity:0.8;
@@ -78,6 +86,7 @@ body {
 .btn-result {
     grid-row: span 2;
     padding-top: 40px;
+    background-color:rgb(9,175,4)
 }
 .btn-ac {
     background-color:red;
