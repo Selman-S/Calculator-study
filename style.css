@@ -40,12 +40,31 @@ body {
 
 
 }
+.screenup {
+    display: flex;
+    border:1px solid red;
+}
+.res1 , .res2 {
+    display: none;
+}
 #result {
     font-size:2.3rem;
+   
+    display: flex;
+
 }
-#operation {
+.opr {
+    font-size:2.3rem;
+    border:1px solid yellow;
+
+
+    
+    
+}
+#screen-down {
     text-align:end;
     font-size:1.8rem;
+    border:1px solid yellowgreen
 }
 
 .buttons {
