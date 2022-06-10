@@ -51,10 +51,12 @@ buton.addEventListener('click',(event) =>{
        
        
       }
+      //operanda bastığında operand boşsa basılanı ata 
       
       if(operand.innerText==''){
         operand.innerText = event.target.innerText
       }
+      //üst te sayı var alt sıfırsa operanda bastığında altı sıfır kabul et
      if(screenup.innerText && screendown.innerText != '0'){
        hesapla();
        screendown.innerText = '0';
@@ -70,6 +72,7 @@ buton.addEventListener('click',(event) =>{
   // eşittire basınca
   
   if(event.target.classList.contains('btn-result')){
+
     if(screendown.innerText == '0'){
       operand.innerText ='';
     }else {
@@ -85,8 +88,17 @@ buton.addEventListener('click',(event) =>{
     
     
     
+    // noktaya bastığında
+    if(event.target.classList.contains('dot')){
+      screendown.innerText +=  event.target.innerText
+      if((screendown.innerText[screendown.innerText.length-1]=='.')&&(screendown.innerText[screendown.innerText.length-2]=='.')){
+       screendown.innerText = screendown.innerText.slice(0,screendown.innerText.length-1)
+      }
     
-    
+     
+      
+
+    }
     
     
 
@@ -101,6 +113,7 @@ buton.addEventListener('click',(event) =>{
 
 
   })
+  //dört işlem fonksiyonu
   function hesapla(){
     const operat= document.querySelector('.opr').innerText;
     // if(screendown.innerText == '')
@@ -126,9 +139,6 @@ buton.addEventListener('click',(event) =>{
       
    
     
-  //  if (String(result)) {
-     
-  //  }
 
 
   }
